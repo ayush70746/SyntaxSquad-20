@@ -27,7 +27,7 @@ export default function Navbar() {
           onClick={() => router.push("/dashboard")}
         >
           <Image
-            src="/logo.jpg"
+            src="/logo1.jpg"
             alt="OptiCare Logo"
             width={60}
             height={60}
