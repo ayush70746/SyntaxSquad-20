@@ -24,4 +24,4 @@ const protect = AsyncHandler(async (req, res, next) => {
   }
 });
 
-export default protect; // ✅ Default export
+export default protect; 

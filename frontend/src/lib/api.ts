@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const API_BASE_URL = "http://localhost:5000/api/auth";
 
 export const signup = async (
@@ -32,4 +34,9 @@ export const login = async (email: string, password: string) => {
   });
 
   return response.json();
+};
+
+export const fetchReassign = async () => {
+  const response = await axios.get("/api/staff/reassign");
+  return response.data;
 };

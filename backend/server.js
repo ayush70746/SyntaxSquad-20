@@ -3,16 +3,18 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
+import staffRoutes from "./routes/staffRoutes.js"; // 👈 Import staffRoutes
 
 dotenv.config();
 const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Parses incoming JSON requests
+app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/staff", staffRoutes); // 👈 Add this line
 
 // Connect to MongoDB
 const connectDB = async () => {
@@ -21,7 +23,7 @@ const connectDB = async () => {
     console.log("✅ MongoDB Connected Successfully");
   } catch (error) {
     console.error("❌ MongoDB Connection Error:", error);
-    process.exit(1); // Exit the process on failure
+    process.exit(1);
   }
 };
 
