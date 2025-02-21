@@ -288,7 +288,7 @@ const HospitalDashboard = () => {
                     slot.status === "In-Progress" ? "bg-blue-200 text-blue-700" :
                     "bg-green-200 text-green-700"
                   }`}>
-                    {slot.status}
+                    {slot.status} 
                   </span>
                 </div>
               </div>
